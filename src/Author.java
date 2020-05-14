@@ -4,6 +4,7 @@
 import java.util.ArrayList;
 import java.util.List;
 
+@SuppressWarnings("unchecked")
 public class Author extends Person {
 
     private List books;
@@ -24,16 +25,15 @@ public class Author extends Person {
      * Note: Recompile with -Xlint:unchecked for details.
      * 1 error
      */
-    @Deprecated(since ="Use publishedBooks instead.")
-    @SuppressWarnings("unchecked")
+    @Deprecated
     public List<String> getBooks() {
         return books;
     }
-    @SuppressWarnings("unchecked")
+//    @SuppressWarnings("unchecked")
     public List<String> publishedBooks() {
         return books;
     }
-    @SuppressWarnings("unchecked")
+//    @SuppressWarnings("unchecked")
     public void addBook(String book) {
         books.add(book);
     }
